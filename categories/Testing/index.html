@@ -623,6 +623,28 @@
 
 
 
+  
+    //_config.yml文件若没有添加enable: true可删除该判断
+
+          
+      <link rel='stylesheet' href="https://yiyeti.cc/usr/themes/veryse/css/gitalk.css">
+      <script src="https://yiyeti.cc/usr/themes/veryse/css/gitalk.min.js"></script>
+      <script type="text/javascript">
+          var gitalk = new Gitalk({
+            clientID:  '07bbeb179aba826dc501', 
+            clientSecret: 'c97a5013dc8186251ef1bb0de5753900b8593c8c',
+            id: window.location.pathname,
+            repo: 'cirvor.github.io', 
+            owner: 'cirvor', 
+            admin: '', 
+            distractionFreeMode: 'true',
+          })
+          gitalk.render('gitalk-container')
+      </script>
+    
+
+  
+
 
   
 
