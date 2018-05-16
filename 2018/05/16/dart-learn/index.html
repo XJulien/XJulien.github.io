@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="Cirvor">
 <meta property="og:description" content="基础规则  赋值  只能把对象赋值给变量，每个对象都是类的实例 数字、方法、null值都是对象 所有对象继承自Object类   声明  变量需要指明变量类型 未指明的话则会变成特殊的dynamic 任何变量的初始值为null，null类型的初始值也是null">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-16T09:10:27.209Z">
+<meta property="og:updated_time" content="2018-05-16T09:18:54.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dart基础学习">
 <meta name="twitter:description" content="基础规则  赋值  只能把对象赋值给变量，每个对象都是类的实例 数字、方法、null值都是对象 所有对象继承自Object类   声明  变量需要指明变量类型 未指明的话则会变成特殊的dynamic 任何变量的初始值为null，null类型的初始值也是null">
@@ -399,10 +399,12 @@
 <ul>
 <li>变量需要指明变量类型</li>
 <li>未指明的话则会变成特殊的<code>dynamic</code></li>
-<li>任何变量的初始值为<code>null</code>，<code>null</code>类型的初始值也是<code>null</code>
-<a id="more"></a></li>
+<li>任何变量的初始值为<code>null</code>，<code>null</code>类型的初始值也是<code>null</code></li>
 </ul>
 </li>
+</ul>
+<p><a id="more"></a></p>
+<ul>
 <li>结构
 <ul>
 <li>支持顶层方法(<code>main()方法</code>)</li>
@@ -596,7 +598,27 @@
 <li>在<code>Map</code>上使用时，会带有2个参数<code>(k,v)</code></li>
 </ul>
 </li>
-<li><code>.map()</code></li>
+<li><code>.map()</code>
+<ul>
+<li>该对象是懒求值的，只有访问是才会调用</li>
+<li>可以使用<code>.toList()</code>或则<code>.toSet()</code>来强制立刻执行</li>
+</ul>
+</li>
+<li><code>.where()</code>
+<ul>
+<li>返回所有满足特定条件的数据</li>
+</ul>
+</li>
+<li><code>.any()</code>
+<ul>
+<li>判断是否有满足特定条件的数据</li>
+</ul>
+</li>
+<li><code>.every()</code>
+<ul>
+<li>判断是否所有都满足特定条件</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
