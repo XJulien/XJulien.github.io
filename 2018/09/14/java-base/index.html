@@ -99,25 +99,24 @@
 
 
 
-  <meta name="description" content="前言·  ⭐️ 表示应当会用 ⭐️⭐️ 表示应当了解基本操作 ⭐️⭐️⭐️ 表示应当能够熟练使用 【参考来源】：  前端学习路径 Web前端工程师 HTML/CSS &amp;amp; JavaScript, Web and related. 前端手册 前端开发，从草根到英雄 前端知识点">
-<meta name="keywords" content="web,前端,learn">
+  <meta name="description" content="数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端学习">
-<meta property="og:url" content="https://cirvor.github.io/2018/04/13/web-study/index.html">
+<meta property="og:title" content="java-base">
+<meta property="og:url" content="https://cirvor.github.io/2018/09/14/java-base/index.html">
 <meta property="og:site_name" content="Cirvor">
-<meta property="og:description" content="前言·  ⭐️ 表示应当会用 ⭐️⭐️ 表示应当了解基本操作 ⭐️⭐️⭐️ 表示应当能够熟练使用 【参考来源】：  前端学习路径 Web前端工程师 HTML/CSS &amp;amp; JavaScript, Web and related. 前端手册 前端开发，从草根到英雄 前端知识点">
+<meta property="og:description" content="数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-17T05:20:39.000Z">
+<meta property="og:updated_time" content="2019-02-14T01:37:23.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端学习">
-<meta name="twitter:description" content="前言·  ⭐️ 表示应当会用 ⭐️⭐️ 表示应当了解基本操作 ⭐️⭐️⭐️ 表示应当能够熟练使用 【参考来源】：  前端学习路径 Web前端工程师 HTML/CSS &amp;amp; JavaScript, Web and related. 前端手册 前端开发，从草根到英雄 前端知识点">
+<meta name="twitter:title" content="java-base">
+<meta name="twitter:description" content="数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
 
 
 
 
 
 
-  <link rel="canonical" href="https://cirvor.github.io/2018/04/13/web-study/"/>
+  <link rel="canonical" href="https://cirvor.github.io/2018/09/14/java-base/"/>
 
 
 
@@ -127,7 +126,7 @@
   };
 </script>
 
-  <title>前端学习 | Cirvor</title>
+  <title>java-base | Cirvor</title>
   
 
 
@@ -294,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cirvor.github.io/2018/04/13/web-study/">
+    <link itemprop="mainEntityOfPage" href="https://cirvor.github.io/2018/09/14/java-base/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Julien">
@@ -311,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">前端学习</h1>
+          <h1 class="post-title" itemprop="name headline">java-base</h1>
         
 
         <div class="post-meta">
@@ -323,7 +322,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-13T10:23:52+08:00">2018-04-13</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T09:35:36+08:00">2018-09-14</time>
             
 
             
@@ -332,24 +331,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -386,213 +367,567 @@
       
 
       
-        <h6>前言·</h6>
-<blockquote>
-<p><em>⭐️ 表示应当会用</em></p>
-<p><em>⭐️⭐️ 表示应当了解基本操作</em></p>
-<p>⭐️⭐️⭐️ 表示应当能够熟练使用</p>
-<p>【参考来源】：</p>
+        <h6>数据类型</h6>
 <ul>
-<li><em><a href="https://zhuanlan.zhihu.com/p/21935921" target="_blank" rel="noopener">前端学习路径</a></em></li>
-<li><em><a href="https://www.imooc.com/course/programdetail/pid/32" target="_blank" rel="noopener">Web前端工程师</a></em></li>
-<li><em><a href="https://github.com/hijiangtao/FE-Cookbook" target="_blank" rel="noopener">HTML/CSS &amp; JavaScript, Web and related. 前端手册</a></em></li>
-<li><em><a href="https://www.jianshu.com/p/8e639ae10dfe#" target="_blank" rel="noopener">前端开发，从草根到英雄</a></em></li>
-<li><em><a href="https://github.com/KieSun/Front-end-knowledge/blob/master/2018/3%E6%9C%88/knowledge.md" target="_blank" rel="noopener">前端知识点</a></em></li>
+<li>基本数据类型
+<ul>
+<li>byte
+<ul>
+<li>8位、有符号 整数</li>
+<li>最小值是<code>-128(-2^7)</code></li>
+<li>最大值是<code>127(2^7-1)</code></li>
+<li>默认值是<code>0</code></li>
+<li>占用空间是<code>int</code>的四分之一</li>
+<li>包装类 Byte</li>
 </ul>
-</blockquote>
+</li>
+<li>short
+<ul>
+<li>16位、有符号 整数</li>
+<li>最小值是<code>-32768(-2^15)</code></li>
+<li>最大值是<code>32767(2^15 - 1)</code></li>
+<li>默认值是<code>0</code></li>
+<li>占用空间是<code>int</code>的二分之一</li>
+<li>包装类 Short</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p><a id="more"></a></p>
+<ul>
+<li>int
+<ul>
+<li>整数默认类型</li>
+<li>32位、有符号 整数</li>
+<li>最小值是<code>-2,147,483,648(-2^31)</code></li>
+<li>最大值是<code>2,147,485,647(2^31 - 1)</code></li>
+<li>默认值是<code>0</code></li>
+<li>包装类 Integer</li>
+</ul>
+</li>
+<li>long
+<ul>
+<li>64位、有符号整数</li>
+<li>最小值是<code>-9,223,372,036,854,775,808(-2^63)</code></li>
+<li>最大值是<code>9,223,372,036,854,775,807(2^63 -1)</code></li>
+<li>默认值是<code>0L</code></li>
+<li>包装类 Long</li>
+</ul>
+</li>
+<li>float
+<ul>
+<li>单精度、32位的浮点数</li>
+<li>默认值是<code>0.0f</code></li>
+<li>不能用于表示精确的值</li>
+<li>包装类 Float</li>
+</ul>
+</li>
+<li>double
+<ul>
+<li>浮点数默认类型</li>
+<li>双精度、64位的浮点数</li>
+<li>默认值是<code>0.0d</code></li>
+<li>不能用于表示精确的值</li>
+<li>包装类 Double</li>
+</ul>
+</li>
+<li>boolean
+<ul>
+<li><code>true</code> 或者  <code>false</code></li>
+<li>默认<code>false</code></li>
+<li>包装类 Boolean</li>
+</ul>
+</li>
+<li>char
+<ul>
+<li>单一的16位<code>Unicode</code>字符</li>
+<li>最小值是<code>'\u0000'</code>（即为0）</li>
+<li>最大值是<code>'\uffff'</code>（即为65,535）</li>
+<li>默认值是<code>'\u0000'</code>（即为0）</li>
+<li><code>char</code>数据类型可以储存任何字符</li>
+<li>使用单引号声明</li>
+<li>包装类 Character</li>
+</ul>
+</li>
+<li>引用数据类型
+<ul>
+<li>Array
+<ul>
+<li>声明
+<ul>
+<li><code>dataType[] arrayRefVar;</code></li>
+<li><code>dataType[] arrayRefVar = new dataType[arraySize];</code></li>
+<li><code>dataType[] arrayRefVar = {value0, value1, ..., valuek};</code></li>
+</ul>
+</li>
+<li>内置方法
+<ul>
+<li><code>.length</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Class</li>
+<li>Interface</li>
+</ul>
+</li>
+<li>常量
+<ul>
+<li>使用<code>final</code>关键字声明</li>
+<li>一般使用大写作为标识符</li>
+</ul>
+</li>
+<li>类型转换
+<ul>
+<li>规则
+<ul>
+<li><code>boolean</code>不能转换</li>
+<li>转换类型应该是相关类的对象</li>
+<li>将大容量类型转小容量类型，需强制转换</li>
+<li>转换过程可能会导致溢出或损失精度</li>
+<li>浮点转整数，会舍弃小数，而不是四舍五入</li>
+</ul>
+</li>
+<li>自动类型转换
+<ul>
+<li>转换钱的数据类型位数要低于转换后的数据类型</li>
+</ul>
+</li>
+<li>强制类型转换
+<ul>
+<li>转换的数据类型必须兼容</li>
+<li>格式为：<code>(type) value</code></li>
+</ul>
+</li>
+<li>隐含强制类型转换
+<ul>
+<li>整数默认为<code>int</code></li>
+<li>浮点不存在此情况，在定义时必须在数字后跟上<code>F</code>或<code>f</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6>变量</h6>
+<ul>
+<li>声明
+<ul>
+<li>变量在使用前必须声明</li>
+<li>声明格式为<code>type identifier [ = value][, identifier [= value] ...] ;</code></li>
+</ul>
+</li>
+<li>局部变量
+<ul>
+<li>声明在方法、构造方法、或语句块中</li>
+<li>局部变量在执行完成后，将会被销毁</li>
+<li>访问修饰符不能用于局部变量</li>
+<li>只在声明局部可见</li>
+<li>局部变量时在栈上分配的</li>
+<li>局部变量没有默认值，必须初始化！</li>
+</ul>
+</li>
+<li>实例变量
+<ul>
+<li>声明在类中，但在方法、构造方法、语句块之外</li>
+<li>随着对象被实例化而确定</li>
+<li>在对象被创建时创建、对象被销毁时销毁</li>
+<li>应保证被使用</li>
+<li>可以声明在使用前或使用后</li>
+<li>可以被访问修饰符修饰</li>
+<li>具有默认值，可以在声明时指定，或在构造方法中指定</li>
+<li>在静态方法或其他类中，应使用完全限定名访问</li>
+</ul>
+</li>
+<li>静态变量
+<ul>
+<li>类中以<code>static</code>声明， 但必须在方法、构造方法、语句块之外</li>
+<li>无论创建了多少对象，类值拥有静态变量的拷贝</li>
+<li>一般被声明为常量</li>
+<li>在第一次被访问时创建，程序结束时销毁</li>
+<li>可以被访问修饰符修饰，一般被声明为<code>public</code></li>
+<li>具有默认值，和实力变量相似</li>
+<li>通过完全限定名访问</li>
+</ul>
+</li>
+</ul>
+<h6>修饰符</h6>
+<ul>
+<li>访问修饰符
+<ul>
+<li>default(即缺省，未添加)
+<ul>
+<li>在同一包内可见</li>
+<li>类、接口、变量、方法</li>
+</ul>
+</li>
+<li>private
+<ul>
+<li>在同一类内可见</li>
+<li>变量、方法</li>
+</ul>
+</li>
+<li>public
+<ul>
+<li>所有类可见</li>
+<li>类、接口、变量、方法</li>
+</ul>
+</li>
+<li>protected
+<ul>
+<li>对同一包内的类和所有子类可见</li>
+<li>变量、方法</li>
+</ul>
+</li>
+<li>访问控制与继承
+<ul>
+<li>父类为<code>public</code>，子类也必须为<code>public</code></li>
+<li>父类中声明为<code>protected</code>， 子类为<code>protected</code>或<code>public</code></li>
+<li>父类不可为<code>private</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非访问修饰符
+<ul>
+<li>static
+<ul>
+<li>静态变量
+<ul>
+<li>用于声明独立与对象的静态变量，无论实例化多少对象，静态变量只有一份拷贝</li>
+</ul>
+</li>
+<li>静态方法
+<ul>
+<li>用于声明独立与对象的静态方法，不能调用类的非静态变量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>final
+<ul>
+<li>变量
+<ul>
+<li>一经赋值，对象引用无法改变</li>
+</ul>
+</li>
+<li>方法
+<ul>
+<li>可以被子类继承，但是不能被子类修改</li>
+</ul>
+</li>
+<li>类型
+<ul>
+<li>无法被继承</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>abstract
+<ul>
+<li>抽象类
+<ul>
+<li>无法实例化，仅用于对类进行扩充</li>
+<li>与<code>final</code>冲突</li>
+<li>一旦存在抽象方法，则必须声明为抽象类，可以不包含抽象方法</li>
+<li>可以包含非抽象方法</li>
+</ul>
+</li>
+<li>抽象方法
+<ul>
+<li>没有方法的实现</li>
+<li>不能被声明为<code>final</code>或<code>static</code></li>
+<li>子类必须实现所有抽象方法，除非子类也是抽象类</li>
+<li>以分号结尾</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>synchronized
+<ul>
+<li>用于实例变量</li>
+<li>序列化时会被跳过</li>
+</ul>
+</li>
+<li>volatile
+<ul>
+<li>多线程访问时，会强制重新读取</li>
+<li>可能为null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6>运算符</h6>
+<ul>
+<li>算术运算符
+<ul>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>/</li>
+<li>%</li>
+<li>++</li>
+</ul>
 <hr>
-<h6>切图</h6>
-<blockquote>
+</li>
+<li>关系运算符
 <ul>
-<li><a href="http://www.imooc.com/learn/506" target="_blank" rel="noopener">Photoshop切图</a></li>
-<li><a href="http://www.sketchs.cn/tutorials/detail/257.html" target="_blank" rel="noopener">Sketch切图（推荐）</a> ⭐️</li>
-</ul>
-</blockquote>
-<hr>
-<h6>编辑器</h6>
-<ul>
-<li>Sublime Text</li>
-<li>Visual Studio Code <em>（和上一个一样快，且插件多）</em> ⭐️</li>
-<li>Webstorm <em>（完美的前端IDE，唯一的不足就是启动起来比较慢）</em> ⭐️</li>
-</ul>
-<hr>
-<h6>代码管理</h6>
-<blockquote>
-<ul>
-<li><a href="http://blog.csdn.net/ljianhui/article/details/11100625" target="_blank" rel="noopener">Linux最常用的20条命令</a>
-<em>学会基础的文件复制删除打开移动操作即可，最好学一下vim</em></li>
-<li><a href="https://backlog.com/git-tutorial/cn/" target="_blank" rel="noopener">Git入门</a> ⭐️⭐️</li>
-</ul>
-</blockquote>
-<hr>
-<h6>调试工具 ⭐️⭐️</h6>
-<blockquote>
-<ul>
-<li><a href="http://wiki.jikexueyuan.com/project/chrome-devtools/overview.html" target="_blank" rel="noopener">Chrome调试工具</a>
-<ul>
-<li>断点调试</li>
-<li>数据交互</li>
+<li>==</li>
+<li>!=</li>
+<li>&gt;</li>
+<li>&lt;</li>
+<li>&gt;=</li>
+<li>&lt;=</li>
 </ul>
 </li>
-</ul>
-</blockquote>
-<hr>
-<h6>HTML + CSS</h6>
+<li>位运算符</li>
+<li>逻辑运算符
 <ul>
-<li>基础 ⭐️⭐️⭐️</li>
-<li>响应式布局
-<ul>
-<li><a href="http://geekplux.com/grid/" target="_blank" rel="noopener">响应式设计简易指南</a> ⭐️</li>
-<li><a href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html" target="_blank" rel="noopener">自适应网页设计</a></li>
-<li>Flex布局 ⭐️⭐️⭐️
-<ul>
-<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">语法篇</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="noopener">实战篇</a></li>
+<li>&amp;&amp;</li>
+<li>||</li>
+<li>！</li>
 </ul>
 </li>
-<li><a href="http://www.alloyteam.com/2016/03/mobile-web-adaptation-tool-rem/" target="_blank" rel="noopener">移动web适配利器-rem</a>
-<blockquote>
-<p><em>移动端因为要适配不同的屏幕尺寸，使用rem更具有兼容性</em></p>
-</blockquote>
-</li>
+<li>赋值运算符
+<ul>
+<li>=</li>
+<li>+=</li>
+<li>-=</li>
+<li>*=</li>
+<li>/=</li>
+<li>%=</li>
 </ul>
 </li>
-<li><a href="http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html" target="_blank" rel="noopener">css动画</a> ⭐️</li>
-<li>预编译
+<li>其他运算符
 <ul>
-<li>sass
+<li>三元运算符
 <ul>
-<li><a href="http://www.imooc.com/learn/311" target="_blank" rel="noopener">入门篇</a></li>
-<li><a href="http://www.imooc.com/learn/436" target="_blank" rel="noopener">进阶篇</a></li>
+<li><code>variable x = (expression) ? value if true : value if false</code></li>
 </ul>
 </li>
-<li>less</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h6>JavaScript</h6>
+<li>instanceof
 <ul>
-<li>基础 ⭐️⭐️⭐️
-<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank" rel="noopener">重新介绍 JavaScript</a></li>
-<li>ES6
-<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">箭头函数</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes" target="_blank" rel="noopener">类</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/let" target="_blank" rel="noopener">let</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/const" target="_blank" rel="noopener">const</a></li>
+<li>判断是否是类或者接口的一个对象</li>
+<li><code>( Object reference variable ) instanceof (class/interface type)</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Canvas
+</ul>
+<h6>循环</h6>
 <ul>
-<li><a href="https://www.imooc.com/learn/185" target="_blank" rel="noopener">Canvas绘图详解</a></li>
-<li><a href="https://www.imooc.com/learn/612" target="_blank" rel="noopener">Canvas 绘制时钟</a></li>
-<li><a href="https://www.imooc.com/learn/476" target="_blank" rel="noopener">Canvas玩转图像处理</a></li>
+<li>while
+<ul>
+<li><code>while( expression ) { sentences }</code></li>
+<li>条件成立则执行</li>
 </ul>
 </li>
-<li>npm  ⭐️
+<li>do...while
 <ul>
-<li><a href="https://www.imooc.com/learn/725" target="_blank" rel="noopener">Roundtable前端分享专场</a> ⭐️</li>
+<li><code>do{ sentences }while(expression)</code></li>
+<li>首先执行一次，然后根据条件是否成立来执行</li>
 </ul>
 </li>
-<li>自动化构建 ⭐️
+<li>for
 <ul>
-<li>webpack
-<ul>
-<li><a href="https://www.imooc.com/learn/802" target="_blank" rel="noopener">Webpack视频教程（推荐）</a></li>
-<li><a href="https://doc.webpack-china.org/concepts/" target="_blank" rel="noopener">Webpack官方文档</a></li>
-<li><a href="http://webpack.wuhaolin.cn/" target="_blank" rel="noopener">深入浅出 Webpack</a></li>
+<li><code>for(int i=0;i&lt;10;i++){ sentences }</code></li>
+<li><code>for(String name : names){ sentences }</code></li>
 </ul>
 </li>
-<li><a href="https://www.gulpjs.com.cn/docs/getting-started/" target="_blank" rel="noopener">Gulp</a></li>
-<li><a href="http://www.css88.com/doc/parcel/getting_started.html" target="_blank" rel="noopener">Parcel</a></li>
+<li>break
+<ul>
+<li>跳出当前循环语句块</li>
 </ul>
 </li>
-<li>ajax
+<li>continue
 <ul>
-<li><a href="https://www.imooc.com/learn/250" target="_blank" rel="noopener">Ajax全接触</a></li>
-<li><a href="https://www.imooc.com/learn/607" target="_blank" rel="noopener">Ajax技术在购物车中的应用</a></li>
-</ul>
-</li>
-<li>进阶
-<ul>
-<li>prototype</li>
-<li>promise</li>
+<li>跳转到下一次循环</li>
 </ul>
 </li>
 </ul>
-<hr>
-<h6>框架</h6>
+<h6>分支</h6>
 <ul>
-<li>jQuery
+<li>if
 <ul>
-<li>Dom操作 ⭐️⭐️⭐️</li>
-<li>Ajax ⭐️⭐️⭐️</li>
-<li>常见插件 ⭐️
+<li><code>if(expression){ sentences }</code></li>
+<li><code>else{ sentences }</code></li>
+<li><code>else if(expression){ sentences }</code></li>
+</ul>
+</li>
+<li>switch
 <ul>
-<li><a href="http://fex.baidu.com/webuploader/" target="_blank" rel="noopener">WebUploader</a></li>
-<li><a href="http://fex.baidu.com/ueditor/" target="_blank" rel="noopener">ueditor</a></li>
-<li><a href="https://www.imooc.com/learn/514" target="_blank" rel="noopener">FullPage.js</a></li>
+<li>swtich(expression){}</li>
+<li>case 满足条件</li>
+<li>break 结束循环</li>
+<li>default</li>
+</ul>
+</li>
+</ul>
+<h6>方法</h6>
+<ul>
+<li>定义
+<ul>
+<li>结构
+<ul>
+<li>修饰符
+<ul>
+<li>可选</li>
+<li>定义方法返回访问类型</li>
+</ul>
+</li>
+<li>返回值类型
+<ul>
+<li>定义方法返回值类型
+<ul>
+<li>无返回值则使用<code>void</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>zepto
+<li>方法名
 <ul>
-<li><a href="https://www.imooc.com/learn/229" target="_blank" rel="noopener">移动端开发框架Zepto.js入门</a></li>
+<li>小驼峰式命名规则</li>
+<li>与参数共同构成方法签名</li>
 </ul>
 </li>
-<li>Bootstrap ⭐️
+<li>参数
 <ul>
-<li><a href="http://www.runoob.com/bootstrap/bootstrap-tutorial.html" target="_blank" rel="noopener">菜鸟教程：Bootstrap</a></li>
-<li><a href="http://www.imooc.com/learn/141" target="_blank" rel="noopener">慕课网：玩转Bootstrap（基础）</a></li>
+<li>需要有参数类型</li>
+<li>可选</li>
 </ul>
 </li>
-<li><a href="http://www.layui.com/" target="_blank" rel="noopener">LayUI</a></li>
-<li><a href="https://github.com/Tencent/weui/wiki" target="_blank" rel="noopener">WeUI</a>
-<blockquote>
-<p><em>建议搭配zepto.js使用WeUI, 因为对于移动端来说，它更轻量级</em></p>
-</blockquote>
-</li>
-<li>VueJS</li>
-</ul>
-<hr>
-<h6>实战</h6>
+<li>方法体
 <ul>
-<li><a href="https://codepen.io/JaguarDev/pen/BooXJw" target="_blank" rel="noopener">Menu App Interface</a></li>
-<li><a href="https://codepen.io/jonathanzwhite/pen/GZVKmE" target="_blank" rel="noopener">Article News Card</a></li>
-<li><a href="https://codepen.io/mecarter/pen/RNomVo" target="_blank" rel="noopener">心情颜色</a></li>
-<li><a href="https://codepen.io/nodws/pen/heILd" target="_blank" rel="noopener">计算器</a></li>
-<li><a href="https://codepen.io/jasonchan/pen/wMaEwN" target="_blank" rel="noopener">问答</a></li>
-<li><a href="https://codepen.io/jeffibacache/pen/bzBsp" target="_blank" rel="noopener">小行星画布游戏</a></li>
-<li><a href="https://codepen.io/stevenfabre/pen/Cyhjb" target="_blank" rel="noopener">扁平时钟</a></li>
-<li><a href="https://codepen.io/rapidrob/pen/IGEhn" target="_blank" rel="noopener">漂亮的时钟</a></li>
-<li><a href="https://www.dropbox.com/business" target="_blank" rel="noopener">仿照dropbox</a></li>
-<li><a href="https://www.airbnbchina.cn/" target="_blank" rel="noopener">仿照airbnb</a></li>
-<li><a href="https://soppo.pl/" target="_blank" rel="noopener">仿照个人首页</a></li>
-<li><a href="https://github.com/KieSun/webpack-demo" target="_blank" rel="noopener">webpack实战</a></li>
-</ul>
-<hr>
-<h6>附加</h6>
-<ul>
-<li>代码风格规范
-<ul>
-<li><a href="http://alloyteam.github.io/CodeGuide/" target="_blank" rel="noopener">腾讯前端代码规范</a> ⭐️</li>
+<li>定义方法实现的功能</li>
 </ul>
 </li>
-<li>协议</li>
+<li>返回值</li>
 </ul>
-<blockquote>
+</li>
+<li>重载
 <ul>
-<li><a href="https://github.com/skyline75489/what-happens-when-zh_CN" target="_blank" rel="noopener">当你在浏览器中输入 google.com 并且按下回车之后发生了什么？</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81" target="_blank" rel="noopener">HTTP响应码</a></li>
+<li>方法同名，参数不同</li>
 </ul>
-</blockquote>
-<hr>
+</li>
+<li>构造方法
+<ul>
+<li>与类名相同</li>
+</ul>
+</li>
+<li>可变参数
+<ul>
+<li><code>typeName... parameterName</code></li>
+<li>一个方法仅可指定一个可变参数</li>
+<li>必须是最后一个参数</li>
+</ul>
+</li>
+<li><code>finalize()</code>
+<ul>
+<li>GC前调用方法</li>
+<li>对象不一定会被回收</li>
+<li>靠不住</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6>常用对象</h6>
+<ul>
+<li>Date</li>
+<li>Number</li>
+<li>Math</li>
+<li>Character</li>
+<li>String</li>
+<li>StringBuffer</li>
+<li>StringBuilder</li>
+</ul>
+<h6>正则表达式</h6>
+<ul>
+<li>使用
+<ul>
+<li>引入包<code>import java.util.regex.*;</code></li>
+</ul>
+</li>
+<li>结构
+<ul>
+<li>Pattern
+<ul>
+<li>调用匹配</li>
+</ul>
+</li>
+<li>Matcher
+<ul>
+<li>匹配返回结果对象</li>
+</ul>
+</li>
+<li>PatternSyntaxException
+<ul>
+<li>捕获异常</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6>文件I/O</h6>
+<ul>
+<li>控制台
+<ul>
+<li>输入
+<ul>
+<li><code>new BufferedReader(new InputStreamReader(System.in));</code></li>
+<li><code>new Scanner(System.in);</code></li>
+</ul>
+</li>
+<li>输出</li>
+</ul>
+</li>
+<li>本地文件
+<ul>
+<li>写入
+<ul>
+<li><code>FileInputStream</code></li>
+</ul>
+</li>
+<li>读取
+<ul>
+<li><code>FileOutputStream</code></li>
+</ul>
+</li>
+<li>创建目录
+<ul>
+<li><code>.mkdir()</code></li>
+<li><code>.mkdirs()</code></li>
+</ul>
+</li>
+<li>读取目录
+<ul>
+<li><code>.isDirectory()</code></li>
+</ul>
+</li>
+<li>删除
+<ul>
+<li><code>deleteFolder(file)</code></li>
+<li><code>.delete()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6>异常</h6>
+<h6>枚举</h6>
 
       
     </div>
@@ -614,7 +949,7 @@
     <strong>本文作者： </strong>Julien</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://cirvor.github.io/2018/04/13/web-study/" title="前端学习">https://cirvor.github.io/2018/04/13/web-study/</a>
+    <a href="https://cirvor.github.io/2018/09/14/java-base/" title="java-base">https://cirvor.github.io/2018/09/14/java-base/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -625,16 +960,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/web/" rel="tag"># web</a>
-          
-            <a href="/tags/前端/" rel="tag"># 前端</a>
-          
-            <a href="/tags/learn/" rel="tag"># learn</a>
-          
-        </div>
-      
 
       
       
@@ -644,8 +969,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/13/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/09/10/web-advanced/" rel="next" title="前端进阶学习">
+                <i class="fa fa-chevron-left"></i> 前端进阶学习
               </a>
             
           </div>
@@ -653,10 +978,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/17/docker-shell/" rel="prev" title="Docker命令">
-                Docker命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -825,7 +1146,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">前言·</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">切图</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">编辑器</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">代码管理</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">调试工具 ⭐️⭐️</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">HTML + CSS</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">框架</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">实战</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">附加</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">常用对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">文件I/O</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">12.</span> <span class="nav-text">枚举</span></a></li></ol></div>
             
 
           </div>
