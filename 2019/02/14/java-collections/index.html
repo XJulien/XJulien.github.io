@@ -99,25 +99,34 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="test">
+  <meta name="description" content="Collection   AbstractCollection是其父级抽象类 是Set，Queue，List的父接口">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://cirvor.github.io/2018/04/13/hello-world/index.html">
+<meta property="og:title" content="Java集合框架">
+<meta property="og:url" content="https://cirvor.github.io/2019/02/14/java-collections/index.html">
 <meta property="og:site_name" content="Cirvor">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Collection   AbstractCollection是其父级抽象类 是Set，Queue，List的父接口">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-13T02:26:11.839Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fz3vvmjoh6g30hv0gzweu.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fz1bwx0bulj30xh0nc0v2.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fz1elbrfyij30u00vxqbh.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fz51294ba9j30hq0773yu.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fz513uwr6rj30vr0u0gsy.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fz40izz54qj30mc0lkq5o.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fz51ijsew8j30w40u045u.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fz5bjfispkj30xq0u0wmf.jpg">
+<meta property="og:updated_time" content="2019-02-14T01:49:44.770Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Java集合框架">
+<meta name="twitter:description" content="Collection   AbstractCollection是其父级抽象类 是Set，Queue，List的父接口">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fz3vvmjoh6g30hv0gzweu.gif">
 
 
 
 
 
 
-  <link rel="canonical" href="https://cirvor.github.io/2018/04/13/hello-world/"/>
+  <link rel="canonical" href="https://cirvor.github.io/2019/02/14/java-collections/"/>
 
 
 
@@ -127,7 +136,7 @@
   };
 </script>
 
-  <title>Hello World | Cirvor</title>
+  <title>Java集合框架 | Cirvor</title>
   
 
 
@@ -294,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cirvor.github.io/2018/04/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://cirvor.github.io/2019/02/14/java-collections/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Julien">
@@ -311,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Java集合框架</h1>
         
 
         <div class="post-meta">
@@ -323,7 +332,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-13T09:36:50+08:00">2018-04-13</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T09:48:45+08:00">2019-02-14</time>
             
 
             
@@ -332,6 +341,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -368,17 +395,224 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2>Quick Start</h2>
-<h3>Create a new post</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">More info: [Writing](https://hexo.io/docs/writing.html)</span><br><span class="line"></span><br><span class="line"><span class="comment">### Run server</span></span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3>Generate static files</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3>Deploy to remote sites</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fz3vvmjoh6g30hv0gzweu.gif" alt=""></p>
+<h4>Collection</h4>
+<blockquote>
+<ul>
+<li><code>AbstractCollection</code>是其父级抽象类</li>
+<li>是<code>Set</code>，<code>Queue</code>，<code>List</code>的父接口</li>
+</ul>
+</blockquote>
+<p><a id="more"></a>
+<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fz1bwx0bulj30xh0nc0v2.jpg" alt="collection"></p>
+<h4>Set</h4>
+<blockquote>
+<ul>
+<li>父级接口为<code>Collection</code>，拥有此接口中定义的所有方法</li>
+<li><code>AbstractSet</code>为其父级抽象类，扩展自<code>AbstractCollection</code>抽象类</li>
+<li>无序、不可重复的集合</li>
+<li>无额外方法，但不允许添加重复元素，<code>add()</code> 方法在添加重复元素时会返回<code>false</code></li>
+</ul>
+</blockquote>
+<h6>HashSet</h6>
+<ul>
+<li>无序，唯一</li>
+<li>基于<code>HashMap</code>实现，底层采用<code>HashMap</code>保存元素</li>
+<li>线程不安全</li>
+<li>值可以为<code>Null</code></li>
+<li>更适合添加、查询操作</li>
+</ul>
+<h6>LinkedHashSet</h6>
+<ul>
+<li>有序，唯一</li>
+<li>继承自<code>HashSet</code>，元素会按照插入顺序进行排序</li>
+<li>底层通过<code>LinkedHashMap</code>实现</li>
+<li>更适合插入排序、删除以及遍历操作</li>
+</ul>
+<h6>TreeSet</h6>
+<ul>
+<li>有序，唯一</li>
+<li>父级接口为<code>SortedSet</code></li>
+<li>红黑树，自平衡的排序二叉树</li>
+<li>在实例化时可通过一个自定义比较器<code>Comparator</code>来指定元素顺序</li>
+<li>额外方法：
+<ul>
+<li>lower()，返回小于给定元素的元素</li>
+<li>floor()，返回小于等于给定元素的元素</li>
+<li>ceiling()，返回大于等于给定元素的元素</li>
+<li>higher()，返回大于给定元素的元素</li>
+<li>如果不存在这样的元素，则返回 null。</li>
+</ul>
+</li>
+</ul>
+<h6>EnumSet</h6>
+<ul>
+<li>
+<p>与枚举类型一起使用的专用<code>Set</code>实现</p>
+</li>
+<li>
+<p>所有元素必须来自单个枚举类型</p>
+</li>
+<li>
+<p><strong>无构造方法</strong>，只能通过内置静态方法从指定的枚举类中获取实例</p>
+</li>
+<li>
+<p>如：<code>EnumSet&lt;EnumColor&gt; allSet = EnumSet.allOf(EnumColor.class);</code></p>
+</li>
+<li>
+<p>方法</p>
+<ul>
+<li><code>allOf()</code></li>
+<li><code>clone()</code></li>
+<li><code>noneOf()</code></li>
+</ul>
+</li>
+</ul>
+<h4>List</h4>
+<blockquote>
+<ul>
+<li>父级接口为<code>Collection</code>，</li>
+<li><code>AbstractList</code>为其父级抽象类，扩展自<code>AbstractCollection</code>抽象类</li>
+<li>有序、可以重复的集合</li>
+<li>每个元素都有其对应的顺序索引，允许在指定位置进行操作，且增加了迭代器<code>ListIterator</code></li>
+<li>父级接口为Collection，拥有此接口中定义的所有方法</li>
+</ul>
+</blockquote>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fz1elbrfyij30u00vxqbh.jpg" alt="list"></p>
+<h6>ArrayList ⭐️⭐⭐️</h6>
+<ul>
+<li>数组队列，相当于一个动态数组，由数组实现</li>
+<li>随机访问效率高，但随机插入、删除效率低</li>
+<li>线程不安全，但效率相对而言较高</li>
+</ul>
+<h6>Vector</h6>
+<ul>
+<li>矢量队列，相当于一个动态数组，由数组实现</li>
+<li>线程安全，但效率相对而言较低</li>
+</ul>
+<p>######Stack</p>
+<ul>
+<li>栈，继承与Vector</li>
+<li>先进后出(FILO, First In Last Out)</li>
+<li>应优先使用<code>LinkedList</code>替代</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fz51294ba9j30hq0773yu.jpg" alt="stack"></p>
+<h6>LinkedList ⭐️⭐⭐️</h6>
+<ul>
+<li>双向链表，也可以被当作一个栈、队列或者双向队列进行操作</li>
+<li>随机访问效率低，随机插入、删除效率高</li>
+<li>线程不安全</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fz513uwr6rj30vr0u0gsy.jpg" alt="linkedList"></p>
+<h4>Queue</h4>
+<blockquote>
+<p>具有先进先出（FIFO）队列关系的集合</p>
+</blockquote>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fz40izz54qj30mc0lkq5o.jpg" alt=""></p>
+<h5>BlockingQueue</h5>
+<blockquote>
+<blockquote>
+<p>此为Queue的子级<strong>接口</strong></p>
+<p>阻塞队列</p>
+<p>当队列满了的时候进行入队操作，会被阻塞，除非另一个线程进行出队操作</p>
+<p>当队列空了的时候进行出队操作时，会被阻塞，除非另一个线程进行入队操作</p>
+<p>线程安全</p>
+<p>不能插入<code>Null</code>值，否则会抛出<code>NullPointerException</code></p>
+</blockquote>
+</blockquote>
+<p>######LinkedBlockingQueue</p>
+<ul>
+<li>可通过传值设置队列大小，默认为Integer最大值</li>
+<li>内部通过链表实现</li>
+</ul>
+<h6>ArrayBlockingQueue</h6>
+<ul>
+<li>创建时bible设置队列大小</li>
+<li>内部通过数组实现</li>
+</ul>
+<h6>PriorityBlockingQueue</h6>
+<ul>
+<li>队列默认初始大小为8，最大值为Integer最大值-8</li>
+<li>内部通过数组实现</li>
+<li>可以插入<code>Null</code></li>
+<li>所有插入元素必须实现<code>Comparable</code>接口，队列优先顺序按照此比较器实现</li>
+</ul>
+<p>SynchronousQueue</p>
+<ul>
+<li>无数据缓冲</li>
+<li>生产者的<code>put</code>必须等待消费者的<code>take</code>，反之亦然</li>
+<li>创建时设置为公平竞争或非公平竞争，默认为非公平竞争</li>
+<li>非公平使用先进后出</li>
+<li>公平竞争使用先进先出</li>
+<li>通过链表实现</li>
+</ul>
+<p>######DelayQueue ⭐️⭐⭐️</p>
+<ul>
+<li>阻塞，有序，延迟</li>
+<li>所有插入元素必须实现<code>java.util.concurrent.Delayed</code>接口，用于设置元素延迟释放时间</li>
+<li>通过<code>getDelay()</code>获取延迟释放时间，返回0或者负值，则表示元素到了释放时间，会通过take方法释放该元素</li>
+<li>应用场景很多：
+<ul>
+<li>关闭空闲连接</li>
+<li>缓存</li>
+<li>任务超时处理</li>
+</ul>
+</li>
+</ul>
+<p>#####Deque</p>
+<blockquote>
+<blockquote>
+<p>此为<code>Queue</code>的子级<strong>接口</strong></p>
+<p>双端队列，可以从队列的两端进行插入、弹出和删除操作</p>
+</blockquote>
+</blockquote>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fz51ijsew8j30w40u045u.jpg" alt="deque"></p>
+<h6>LinkedList</h6>
+<ul>
+<li>同时实现了<code>List</code>和<code>Deque</code>接口，既可以看作一个顺序容器，也可以看作是一个队列，还可以看作一个<strong>栈</strong></li>
+<li>内部通过双向链表实现</li>
+</ul>
+<h6>ArrayDeque</h6>
+<ul>
+<li>内部通过数组实现</li>
+<li>创建时指定队列大小，默认为16，最小为8</li>
+<li>比<code>LinkedList</code>效率高</li>
+</ul>
+<h4>Map</h4>
+<blockquote>
+<p>具有映射关系的集合</p>
+<p>key不允许重复，所有的key放在一起，可以看成一个Set集合</p>
+<p>value放在一起，类似一个List</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fz5bjfispkj30xq0u0wmf.jpg" alt="map"></p>
+<h6>HashMap</h6>
+<ul>
+<li>线程不安全，但性能相对而言较高</li>
+<li>key与value允许使用<code>Null</code></li>
+</ul>
+<h6>HashTable</h6>
+<ul>
+<li>线程安全，但性能相对而言较低</li>
+<li>key与value都不允许为<code>Null</code></li>
+</ul>
+<h6>ConcurrentHashMap ⭐️⭐⭐️</h6>
+<ul>
+<li>线程安全，且性能比HashTable高</li>
+<li>父级接口为<code>ConcurrentMap</code></li>
+</ul>
+<h6>LinkedHashMap</h6>
+<ul>
+<li>继承自<code>HashMap</code></li>
+<li>有序，通过使用双向链表来维护key-value对的次序</li>
+<li>插入性能较低，但是在迭代访问时时性能较好</li>
+</ul>
+<p>######TreeMap</p>
+<ul>
+<li>继承自<code>SortedMap</code>接口</li>
+<li>有序，通过红黑树实现</li>
+<li>自然排序，key必须实现<code>Comparable</code>接口，且所有key应该时同一个类的对象，否则抛出<code>ClassCastException</code></li>
+<li>定制排序，需在创建时传入<code>Comparator</code>对象，用于对所有key进行排序</li>
+</ul>
 
       
     </div>
@@ -400,7 +634,7 @@
     <strong>本文作者： </strong>Julien</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://cirvor.github.io/2018/04/13/hello-world/" title="Hello World">https://cirvor.github.io/2018/04/13/hello-world/</a>
+    <a href="https://cirvor.github.io/2019/02/14/java-collections/" title="Java集合框架">https://cirvor.github.io/2019/02/14/java-collections/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -413,7 +647,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test/" rel="tag"># test</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
         </div>
       
@@ -426,15 +660,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/09/14/java-base/" rel="next" title="Java基础">
+                <i class="fa fa-chevron-left"></i> Java基础
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/13/web-study/" rel="prev" title="前端学习">
-                前端学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -607,7 +841,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Collection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.1.</span> <span class="nav-text">HashSet</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.2.</span> <span class="nav-text">LinkedHashSet</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.3.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.4.</span> <span class="nav-text">EnumSet</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.1.</span> <span class="nav-text">ArrayList ⭐️⭐⭐️</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.2.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.3.</span> <span class="nav-text">LinkedList ⭐️⭐⭐️</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.</span> <span class="nav-text">BlockingQueue</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.1.</span> <span class="nav-text">ArrayBlockingQueue</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.2.</span> <span class="nav-text">PriorityBlockingQueue</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.3.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.4.</span> <span class="nav-text">ArrayDeque</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.1.</span> <span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.2.</span> <span class="nav-text">HashTable</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.3.</span> <span class="nav-text">ConcurrentHashMap ⭐️⭐⭐️</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.4.</span> <span class="nav-text">LinkedHashMap</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
