@@ -99,25 +99,34 @@
 
 
 
-  <meta name="description" content="Java基础知识点总结，仅供复习时使用  数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
+  <meta name="description" content="Collection   AbstractCollection是其父级抽象类 是Set，Queue，List的父接口">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础">
-<meta property="og:url" content="https://cirvor.github.io/2018/09/14/java-base/index.html">
+<meta property="og:title" content="Java集合框架">
+<meta property="og:url" content="https://cirvor.github.io/2018/10/20/java-collections/index.html">
 <meta property="og:site_name" content="Cirvor">
-<meta property="og:description" content="Java基础知识点总结，仅供复习时使用  数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
+<meta property="og:description" content="Collection   AbstractCollection是其父级抽象类 是Set，Queue，List的父接口">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-14T01:44:31.513Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fz3vvmjoh6g30hv0gzweu.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fz1bwx0bulj30xh0nc0v2.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fz1elbrfyij30u00vxqbh.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fz51294ba9j30hq0773yu.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fz513uwr6rj30vr0u0gsy.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fz40izz54qj30mc0lkq5o.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fz51ijsew8j30w40u045u.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fz5bjfispkj30xq0u0wmf.jpg">
+<meta property="og:updated_time" content="2019-02-14T01:50:58.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java基础">
-<meta name="twitter:description" content="Java基础知识点总结，仅供复习时使用  数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
+<meta name="twitter:title" content="Java集合框架">
+<meta name="twitter:description" content="Collection   AbstractCollection是其父级抽象类 是Set，Queue，List的父接口">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fz3vvmjoh6g30hv0gzweu.gif">
 
 
 
 
 
 
-  <link rel="canonical" href="https://cirvor.github.io/2018/09/14/java-base/"/>
+  <link rel="canonical" href="https://cirvor.github.io/2018/10/20/java-collections/"/>
 
 
 
@@ -127,7 +136,7 @@
   };
 </script>
 
-  <title>Java基础 | Cirvor</title>
+  <title>Java集合框架 | Cirvor</title>
   
 
 
@@ -294,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cirvor.github.io/2018/09/14/java-base/">
+    <link itemprop="mainEntityOfPage" href="https://cirvor.github.io/2018/10/20/java-collections/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Julien">
@@ -311,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java基础</h1>
+          <h1 class="post-title" itemprop="name headline">Java集合框架</h1>
         
 
         <div class="post-meta">
@@ -323,7 +332,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T09:35:36+08:00">2018-09-14</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-20T21:28:45+08:00">2018-10-20</time>
             
 
             
@@ -386,556 +395,224 @@
       
 
       
-        <blockquote>
-<p>Java基础知识点总结，仅供复习时使用</p>
+        <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fz3vvmjoh6g30hv0gzweu.gif" alt=""></p>
+<h4>Collection</h4>
+<blockquote>
+<ul>
+<li><code>AbstractCollection</code>是其父级抽象类</li>
+<li>是<code>Set</code>，<code>Queue</code>，<code>List</code>的父接口</li>
+</ul>
 </blockquote>
-<h6>数据类型</h6>
+<p><a id="more"></a>
+<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fz1bwx0bulj30xh0nc0v2.jpg" alt="collection"></p>
+<h4>Set</h4>
+<blockquote>
 <ul>
-<li>基本数据类型
-<ul>
-<li>byte
-<ul>
-<li>8位、有符号 整数</li>
-<li>最小值是<code>-128(-2^7)</code></li>
-<li>最大值是<code>127(2^7-1)</code></li>
-<li>默认值是<code>0</code></li>
-<li>占用空间是<code>int</code>的四分之一</li>
-<li>包装类 Byte</li>
-</ul>
-</li>
-<li>short
-<ul>
-<li>16位、有符号 整数</li>
-<li>最小值是<code>-32768(-2^15)</code></li>
-<li>最大值是<code>32767(2^15 - 1)</code></li>
-<li>默认值是<code>0</code></li>
-<li>占用空间是<code>int</code>的二分之一</li>
-<li>包装类 Short
-<a id="more"></a></li>
-</ul>
-</li>
-<li>int
-<ul>
-<li>整数默认类型</li>
-<li>32位、有符号 整数</li>
-<li>最小值是<code>-2,147,483,648(-2^31)</code></li>
-<li>最大值是<code>2,147,485,647(2^31 - 1)</code></li>
-<li>默认值是<code>0</code></li>
-<li>包装类 Integer</li>
-</ul>
-</li>
-<li>long
-<ul>
-<li>64位、有符号整数</li>
-<li>最小值是<code>-9,223,372,036,854,775,808(-2^63)</code></li>
-<li>最大值是<code>9,223,372,036,854,775,807(2^63 -1)</code></li>
-<li>默认值是<code>0L</code></li>
-<li>包装类 Long</li>
-</ul>
-</li>
-<li>float
-<ul>
-<li>单精度、32位的浮点数</li>
-<li>默认值是<code>0.0f</code></li>
-<li>不能用于表示精确的值</li>
-<li>包装类 Float</li>
-</ul>
-</li>
-<li>double
-<ul>
-<li>浮点数默认类型</li>
-<li>双精度、64位的浮点数</li>
-<li>默认值是<code>0.0d</code></li>
-<li>不能用于表示精确的值</li>
-<li>包装类 Double</li>
-</ul>
-</li>
-<li>boolean
-<ul>
-<li><code>true</code> 或者  <code>false</code></li>
-<li>默认<code>false</code></li>
-<li>包装类 Boolean</li>
-</ul>
-</li>
-<li>char
-<ul>
-<li>单一的16位<code>Unicode</code>字符</li>
-<li>最小值是<code>'\u0000'</code>（即为0）</li>
-<li>最大值是<code>'\uffff'</code>（即为65,535）</li>
-<li>默认值是<code>'\u0000'</code>（即为0）</li>
-<li><code>char</code>数据类型可以储存任何字符</li>
-<li>使用单引号声明</li>
-<li>包装类 Character</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>引用数据类型
-<ul>
-<li>Array
-<ul>
-<li>声明
-<ul>
-<li><code>dataType[] arrayRefVar;</code></li>
-<li><code>dataType[] arrayRefVar = new dataType[arraySize];</code></li>
-<li><code>dataType[] arrayRefVar = {value0, value1, ..., valuek};</code></li>
-</ul>
-</li>
-<li>内置方法
-<ul>
-<li><code>.length</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Class</li>
-<li>Interface</li>
-</ul>
-</li>
-<li>常量
-<ul>
-<li>使用<code>final</code>关键字声明</li>
-<li>一般使用大写作为标识符</li>
-</ul>
-</li>
-<li>类型转换
-<ul>
-<li>规则
-<ul>
-<li><code>boolean</code>不能转换</li>
-<li>转换类型应该是相关类的对象</li>
-<li>将大容量类型转小容量类型，需强制转换</li>
-<li>转换过程可能会导致溢出或损失精度</li>
-<li>浮点转整数，会舍弃小数，而不是四舍五入</li>
-</ul>
-</li>
-<li>自动类型转换
-<ul>
-<li>转换钱的数据类型位数要低于转换后的数据类型</li>
-</ul>
-</li>
-<li>强制类型转换
-<ul>
-<li>转换的数据类型必须兼容</li>
-<li>格式为：<code>(type) value</code></li>
-</ul>
-</li>
-<li>隐含强制类型转换
-<ul>
-<li>整数默认为<code>int</code></li>
-<li>浮点不存在此情况，在定义时必须在数字后跟上<code>F</code>或<code>f</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h6>变量</h6>
-<ul>
-<li>声明
-<ul>
-<li>变量在使用前必须声明</li>
-<li>声明格式为<code>type identifier [ = value][, identifier [= value] ...] ;</code></li>
-</ul>
-</li>
-<li>局部变量
-<ul>
-<li>声明在方法、构造方法、或语句块中</li>
-<li>局部变量在执行完成后，将会被销毁</li>
-<li>访问修饰符不能用于局部变量</li>
-<li>只在声明局部可见</li>
-<li>局部变量时在栈上分配的</li>
-<li>局部变量没有默认值，必须初始化！</li>
-</ul>
-</li>
-<li>实例变量
-<ul>
-<li>声明在类中，但在方法、构造方法、语句块之外</li>
-<li>随着对象被实例化而确定</li>
-<li>在对象被创建时创建、对象被销毁时销毁</li>
-<li>应保证被使用</li>
-<li>可以声明在使用前或使用后</li>
-<li>可以被访问修饰符修饰</li>
-<li>具有默认值，可以在声明时指定，或在构造方法中指定</li>
-<li>在静态方法或其他类中，应使用完全限定名访问</li>
-</ul>
-</li>
-<li>静态变量
-<ul>
-<li>类中以<code>static</code>声明， 但必须在方法、构造方法、语句块之外</li>
-<li>无论创建了多少对象，类值拥有静态变量的拷贝</li>
-<li>一般被声明为常量</li>
-<li>在第一次被访问时创建，程序结束时销毁</li>
-<li>可以被访问修饰符修饰，一般被声明为<code>public</code></li>
-<li>具有默认值，和实力变量相似</li>
-<li>通过完全限定名访问</li>
-</ul>
-</li>
-</ul>
-<h6>修饰符</h6>
-<ul>
-<li>访问修饰符
-<ul>
-<li>default(即缺省，未添加)
-<ul>
-<li>在同一包内可见</li>
-<li>类、接口、变量、方法</li>
-</ul>
-</li>
-<li>private
-<ul>
-<li>在同一类内可见</li>
-<li>变量、方法</li>
-</ul>
-</li>
-<li>public
-<ul>
-<li>所有类可见</li>
-<li>类、接口、变量、方法</li>
-</ul>
-</li>
-<li>protected
-<ul>
-<li>对同一包内的类和所有子类可见</li>
-<li>变量、方法</li>
-</ul>
-</li>
-<li>访问控制与继承
-<ul>
-<li>父类为<code>public</code>，子类也必须为<code>public</code></li>
-<li>父类中声明为<code>protected</code>， 子类为<code>protected</code>或<code>public</code></li>
-<li>父类不可为<code>private</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>非访问修饰符
-<ul>
-<li>static
-<ul>
-<li>静态变量
-<ul>
-<li>用于声明独立与对象的静态变量，无论实例化多少对象，静态变量只有一份拷贝</li>
-</ul>
-</li>
-<li>静态方法
-<ul>
-<li>用于声明独立与对象的静态方法，不能调用类的非静态变量</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>final
-<ul>
-<li>变量
-<ul>
-<li>一经赋值，对象引用无法改变</li>
-</ul>
-</li>
-<li>方法
-<ul>
-<li>可以被子类继承，但是不能被子类修改</li>
-</ul>
-</li>
-<li>类型
-<ul>
-<li>无法被继承</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>abstract
-<ul>
-<li>抽象类
-<ul>
-<li>无法实例化，仅用于对类进行扩充</li>
-<li>与<code>final</code>冲突</li>
-<li>一旦存在抽象方法，则必须声明为抽象类，可以不包含抽象方法</li>
-<li>可以包含非抽象方法</li>
-</ul>
-</li>
-<li>抽象方法
-<ul>
-<li>没有方法的实现</li>
-<li>不能被声明为<code>final</code>或<code>static</code></li>
-<li>子类必须实现所有抽象方法，除非子类也是抽象类</li>
-<li>以分号结尾</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>synchronized
-<ul>
-<li>用于实例变量</li>
-<li>序列化时会被跳过</li>
-</ul>
-</li>
-<li>volatile
-<ul>
-<li>多线程访问时，会强制重新读取</li>
-<li>可能为null</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h6>运算符</h6>
-<ul>
-<li>算术运算符
-<ul>
-<li>+</li>
-<li>-</li>
-<li>*</li>
-<li>/</li>
-<li>%</li>
-<li>++</li>
-</ul>
-<hr>
-</li>
-<li>关系运算符
-<ul>
-<li>==</li>
-<li>!=</li>
-<li>&gt;</li>
-<li>&lt;</li>
-<li>&gt;=</li>
-<li>&lt;=</li>
-</ul>
-</li>
-<li>位运算符</li>
-<li>逻辑运算符
-<ul>
-<li>&amp;&amp;</li>
-<li>||</li>
-<li>！</li>
-</ul>
-</li>
-<li>赋值运算符
-<ul>
-<li>=</li>
-<li>+=</li>
-<li>-=</li>
-<li>*=</li>
-<li>/=</li>
-<li>%=</li>
-</ul>
-</li>
-<li>其他运算符
-<ul>
-<li>三元运算符
-<ul>
-<li><code>variable x = (expression) ? value if true : value if false</code></li>
-</ul>
-</li>
-<li>instanceof
-<ul>
-<li>判断是否是类或者接口的一个对象</li>
-<li><code>( Object reference variable ) instanceof (class/interface type)</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h6>循环</h6>
-<ul>
-<li>while
-<ul>
-<li><code>while( expression ) { sentences }</code></li>
-<li>条件成立则执行</li>
-</ul>
-</li>
-<li>do...while
-<ul>
-<li><code>do{ sentences }while(expression)</code></li>
-<li>首先执行一次，然后根据条件是否成立来执行</li>
-</ul>
-</li>
-<li>for
-<ul>
-<li><code>for(int i=0;i&lt;10;i++){ sentences }</code></li>
-<li><code>for(String name : names){ sentences }</code></li>
-</ul>
-</li>
-<li>break
-<ul>
-<li>跳出当前循环语句块</li>
-</ul>
-</li>
-<li>continue
-<ul>
-<li>跳转到下一次循环</li>
-</ul>
-</li>
-</ul>
-<h6>分支</h6>
-<ul>
-<li>if
-<ul>
-<li><code>if(expression){ sentences }</code></li>
-<li><code>else{ sentences }</code></li>
-<li><code>else if(expression){ sentences }</code></li>
-</ul>
-</li>
-<li>switch
-<ul>
-<li>swtich(expression){}</li>
-<li>case 满足条件</li>
-<li>break 结束循环</li>
-<li>default</li>
-</ul>
-</li>
-</ul>
-<h6>方法</h6>
-<ul>
-<li>定义
-<ul>
-<li>结构
-<ul>
-<li>修饰符
-<ul>
-<li>可选</li>
-<li>定义方法返回访问类型</li>
-</ul>
-</li>
-<li>返回值类型
-<ul>
-<li>定义方法返回值类型
-<ul>
-<li>无返回值则使用<code>void</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>方法名
-<ul>
-<li>小驼峰式命名规则</li>
-<li>与参数共同构成方法签名</li>
-</ul>
-</li>
-<li>参数
-<ul>
-<li>需要有参数类型</li>
-<li>可选</li>
+<li>父级接口为<code>Collection</code>，拥有此接口中定义的所有方法</li>
+<li><code>AbstractSet</code>为其父级抽象类，扩展自<code>AbstractCollection</code>抽象类</li>
+<li>无序、不可重复的集合</li>
+<li>无额外方法，但不允许添加重复元素，<code>add()</code> 方法在添加重复元素时会返回<code>false</code></li>
 </ul>
-</li>
-<li>方法体
-<ul>
-<li>定义方法实现的功能</li>
-</ul>
-</li>
-<li>返回值</li>
-</ul>
-</li>
-<li>重载
+</blockquote>
+<h6>HashSet</h6>
 <ul>
-<li>方法同名，参数不同</li>
+<li>无序，唯一</li>
+<li>基于<code>HashMap</code>实现，底层采用<code>HashMap</code>保存元素</li>
+<li>线程不安全</li>
+<li>值可以为<code>Null</code></li>
+<li>更适合添加、查询操作</li>
 </ul>
-</li>
-<li>构造方法
+<h6>LinkedHashSet</h6>
 <ul>
-<li>与类名相同</li>
+<li>有序，唯一</li>
+<li>继承自<code>HashSet</code>，元素会按照插入顺序进行排序</li>
+<li>底层通过<code>LinkedHashMap</code>实现</li>
+<li>更适合插入排序、删除以及遍历操作</li>
 </ul>
-</li>
-<li>可变参数
+<h6>TreeSet</h6>
 <ul>
-<li><code>typeName... parameterName</code></li>
-<li>一个方法仅可指定一个可变参数</li>
-<li>必须是最后一个参数</li>
-</ul>
-</li>
-<li><code>finalize()</code>
+<li>有序，唯一</li>
+<li>父级接口为<code>SortedSet</code></li>
+<li>红黑树，自平衡的排序二叉树</li>
+<li>在实例化时可通过一个自定义比较器<code>Comparator</code>来指定元素顺序</li>
+<li>额外方法：
 <ul>
-<li>GC前调用方法</li>
-<li>对象不一定会被回收</li>
-<li>靠不住</li>
-</ul>
-</li>
+<li>lower()，返回小于给定元素的元素</li>
+<li>floor()，返回小于等于给定元素的元素</li>
+<li>ceiling()，返回大于等于给定元素的元素</li>
+<li>higher()，返回大于给定元素的元素</li>
+<li>如果不存在这样的元素，则返回 null。</li>
 </ul>
 </li>
-</ul>
-<h6>常用对象</h6>
-<ul>
-<li>Date</li>
-<li>Number</li>
-<li>Math</li>
-<li>Character</li>
-<li>String</li>
-<li>StringBuffer</li>
-<li>StringBuilder</li>
-</ul>
-<h6>正则表达式</h6>
-<ul>
-<li>使用
-<ul>
-<li>引入包<code>import java.util.regex.*;</code></li>
 </ul>
-</li>
-<li>结构
+<h6>EnumSet</h6>
 <ul>
-<li>Pattern
-<ul>
-<li>调用匹配</li>
-</ul>
+<li>
+<p>与枚举类型一起使用的专用<code>Set</code>实现</p>
 </li>
-<li>Matcher
-<ul>
-<li>匹配返回结果对象</li>
-</ul>
+<li>
+<p>所有元素必须来自单个枚举类型</p>
 </li>
-<li>PatternSyntaxException
-<ul>
-<li>捕获异常</li>
-</ul>
+<li>
+<p><strong>无构造方法</strong>，只能通过内置静态方法从指定的枚举类中获取实例</p>
 </li>
-</ul>
+<li>
+<p>如：<code>EnumSet&lt;EnumColor&gt; allSet = EnumSet.allOf(EnumColor.class);</code></p>
 </li>
-</ul>
-<h6>文件I/O</h6>
-<ul>
-<li>控制台
+<li>
+<p>方法</p>
 <ul>
-<li>输入
-<ul>
-<li><code>new BufferedReader(new InputStreamReader(System.in));</code></li>
-<li><code>new Scanner(System.in);</code></li>
+<li><code>allOf()</code></li>
+<li><code>clone()</code></li>
+<li><code>noneOf()</code></li>
 </ul>
 </li>
-<li>输出</li>
 </ul>
-</li>
-<li>本地文件
+<h4>List</h4>
+<blockquote>
 <ul>
-<li>写入
-<ul>
-<li><code>FileInputStream</code></li>
+<li>父级接口为<code>Collection</code>，</li>
+<li><code>AbstractList</code>为其父级抽象类，扩展自<code>AbstractCollection</code>抽象类</li>
+<li>有序、可以重复的集合</li>
+<li>每个元素都有其对应的顺序索引，允许在指定位置进行操作，且增加了迭代器<code>ListIterator</code></li>
+<li>父级接口为Collection，拥有此接口中定义的所有方法</li>
 </ul>
-</li>
-<li>读取
+</blockquote>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fz1elbrfyij30u00vxqbh.jpg" alt="list"></p>
+<h6>ArrayList ⭐️⭐⭐️</h6>
 <ul>
-<li><code>FileOutputStream</code></li>
+<li>数组队列，相当于一个动态数组，由数组实现</li>
+<li>随机访问效率高，但随机插入、删除效率低</li>
+<li>线程不安全，但效率相对而言较高</li>
 </ul>
-</li>
-<li>创建目录
+<h6>Vector</h6>
 <ul>
-<li><code>.mkdir()</code></li>
-<li><code>.mkdirs()</code></li>
+<li>矢量队列，相当于一个动态数组，由数组实现</li>
+<li>线程安全，但效率相对而言较低</li>
 </ul>
-</li>
-<li>读取目录
+<p>######Stack</p>
 <ul>
-<li><code>.isDirectory()</code></li>
+<li>栈，继承与Vector</li>
+<li>先进后出(FILO, First In Last Out)</li>
+<li>应优先使用<code>LinkedList</code>替代</li>
 </ul>
-</li>
-<li>删除
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fz51294ba9j30hq0773yu.jpg" alt="stack"></p>
+<h6>LinkedList ⭐️⭐⭐️</h6>
 <ul>
-<li><code>deleteFolder(file)</code></li>
-<li><code>.delete()</code></li>
-</ul>
-</li>
+<li>双向链表，也可以被当作一个栈、队列或者双向队列进行操作</li>
+<li>随机访问效率低，随机插入、删除效率高</li>
+<li>线程不安全</li>
 </ul>
-</li>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fz513uwr6rj30vr0u0gsy.jpg" alt="linkedList"></p>
+<h4>Queue</h4>
+<blockquote>
+<p>具有先进先出（FIFO）队列关系的集合</p>
+</blockquote>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fz40izz54qj30mc0lkq5o.jpg" alt=""></p>
+<h5>BlockingQueue</h5>
+<blockquote>
+<blockquote>
+<p>此为Queue的子级<strong>接口</strong></p>
+<p>阻塞队列</p>
+<p>当队列满了的时候进行入队操作，会被阻塞，除非另一个线程进行出队操作</p>
+<p>当队列空了的时候进行出队操作时，会被阻塞，除非另一个线程进行入队操作</p>
+<p>线程安全</p>
+<p>不能插入<code>Null</code>值，否则会抛出<code>NullPointerException</code></p>
+</blockquote>
+</blockquote>
+<p>######LinkedBlockingQueue</p>
+<ul>
+<li>可通过传值设置队列大小，默认为Integer最大值</li>
+<li>内部通过链表实现</li>
+</ul>
+<h6>ArrayBlockingQueue</h6>
+<ul>
+<li>创建时bible设置队列大小</li>
+<li>内部通过数组实现</li>
+</ul>
+<h6>PriorityBlockingQueue</h6>
+<ul>
+<li>队列默认初始大小为8，最大值为Integer最大值-8</li>
+<li>内部通过数组实现</li>
+<li>可以插入<code>Null</code></li>
+<li>所有插入元素必须实现<code>Comparable</code>接口，队列优先顺序按照此比较器实现</li>
+</ul>
+<p>SynchronousQueue</p>
+<ul>
+<li>无数据缓冲</li>
+<li>生产者的<code>put</code>必须等待消费者的<code>take</code>，反之亦然</li>
+<li>创建时设置为公平竞争或非公平竞争，默认为非公平竞争</li>
+<li>非公平使用先进后出</li>
+<li>公平竞争使用先进先出</li>
+<li>通过链表实现</li>
+</ul>
+<p>######DelayQueue ⭐️⭐⭐️</p>
+<ul>
+<li>阻塞，有序，延迟</li>
+<li>所有插入元素必须实现<code>java.util.concurrent.Delayed</code>接口，用于设置元素延迟释放时间</li>
+<li>通过<code>getDelay()</code>获取延迟释放时间，返回0或者负值，则表示元素到了释放时间，会通过take方法释放该元素</li>
+<li>应用场景很多：
+<ul>
+<li>关闭空闲连接</li>
+<li>缓存</li>
+<li>任务超时处理</li>
+</ul>
+</li>
+</ul>
+<p>#####Deque</p>
+<blockquote>
+<blockquote>
+<p>此为<code>Queue</code>的子级<strong>接口</strong></p>
+<p>双端队列，可以从队列的两端进行插入、弹出和删除操作</p>
+</blockquote>
+</blockquote>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fz51ijsew8j30w40u045u.jpg" alt="deque"></p>
+<h6>LinkedList</h6>
+<ul>
+<li>同时实现了<code>List</code>和<code>Deque</code>接口，既可以看作一个顺序容器，也可以看作是一个队列，还可以看作一个<strong>栈</strong></li>
+<li>内部通过双向链表实现</li>
+</ul>
+<h6>ArrayDeque</h6>
+<ul>
+<li>内部通过数组实现</li>
+<li>创建时指定队列大小，默认为16，最小为8</li>
+<li>比<code>LinkedList</code>效率高</li>
+</ul>
+<h4>Map</h4>
+<blockquote>
+<p>具有映射关系的集合</p>
+<p>key不允许重复，所有的key放在一起，可以看成一个Set集合</p>
+<p>value放在一起，类似一个List</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fz5bjfispkj30xq0u0wmf.jpg" alt="map"></p>
+<h6>HashMap</h6>
+<ul>
+<li>线程不安全，但性能相对而言较高</li>
+<li>key与value允许使用<code>Null</code></li>
+</ul>
+<h6>HashTable</h6>
+<ul>
+<li>线程安全，但性能相对而言较低</li>
+<li>key与value都不允许为<code>Null</code></li>
+</ul>
+<h6>ConcurrentHashMap ⭐️⭐⭐️</h6>
+<ul>
+<li>线程安全，且性能比HashTable高</li>
+<li>父级接口为<code>ConcurrentMap</code></li>
+</ul>
+<h6>LinkedHashMap</h6>
+<ul>
+<li>继承自<code>HashMap</code></li>
+<li>有序，通过使用双向链表来维护key-value对的次序</li>
+<li>插入性能较低，但是在迭代访问时时性能较好</li>
+</ul>
+<p>######TreeMap</p>
+<ul>
+<li>继承自<code>SortedMap</code>接口</li>
+<li>有序，通过红黑树实现</li>
+<li>自然排序，key必须实现<code>Comparable</code>接口，且所有key应该时同一个类的对象，否则抛出<code>ClassCastException</code></li>
+<li>定制排序，需在创建时传入<code>Comparator</code>对象，用于对所有key进行排序</li>
 </ul>
-<h6>异常</h6>
-<h6>枚举</h6>
 
       
     </div>
@@ -957,7 +634,7 @@
     <strong>本文作者： </strong>Julien</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://cirvor.github.io/2018/09/14/java-base/" title="Java基础">https://cirvor.github.io/2018/09/14/java-base/</a>
+    <a href="https://cirvor.github.io/2018/10/20/java-collections/" title="Java集合框架">https://cirvor.github.io/2018/10/20/java-collections/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -983,8 +660,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/10/web-advanced/" rel="next" title="前端进阶学习">
-                <i class="fa fa-chevron-left"></i> 前端进阶学习
+              <a href="/2018/10/14/java-base/" rel="next" title="Java基础">
+                <i class="fa fa-chevron-left"></i> Java基础
               </a>
             
           </div>
@@ -992,10 +669,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/14/java-collections/" rel="prev" title="Java集合框架">
-                Java集合框架 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1168,7 +841,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">常用对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">文件I/O</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">12.</span> <span class="nav-text">枚举</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Collection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.1.</span> <span class="nav-text">HashSet</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.2.</span> <span class="nav-text">LinkedHashSet</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.3.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.4.</span> <span class="nav-text">EnumSet</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.1.</span> <span class="nav-text">ArrayList ⭐️⭐⭐️</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.2.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.3.</span> <span class="nav-text">LinkedList ⭐️⭐⭐️</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.</span> <span class="nav-text">BlockingQueue</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.1.</span> <span class="nav-text">ArrayBlockingQueue</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.2.</span> <span class="nav-text">PriorityBlockingQueue</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.3.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.4.</span> <span class="nav-text">ArrayDeque</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.1.</span> <span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.2.</span> <span class="nav-text">HashTable</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.3.</span> <span class="nav-text">ConcurrentHashMap ⭐️⭐⭐️</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.4.</span> <span class="nav-text">LinkedHashMap</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
