@@ -108,7 +108,7 @@
 <meta property="og:description" content="Java基础知识点总结，仅供复习时使用  数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g0u1h2zp0aj30cf07odfs.jpg">
-<meta property="og:updated_time" content="2019-03-07T03:04:58.432Z">
+<meta property="og:updated_time" content="2019-03-19T02:57:03.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础">
 <meta name="twitter:description" content="Java基础知识点总结，仅供复习时使用  数据类型  基本数据类型  byte  8位、有符号 整数 最小值是-128(-2^7) 最大值是127(2^7-1) 默认值是0 占用空间是int的四分之一 包装类 Byte   short  16位、有符号 整数 最小值是-32768(-2^15) 最大值是32767(2^15 - 1) 默认值是0 占用空间是int的二分之一 包装类 Short">
@@ -438,8 +438,8 @@
 <li>float
 <ul>
 <li>单精度、32位的浮点数</li>
-<li>默认值是<code>0.0f</code></li>
-<li>不能用于表示精确的值</li>
+<li>默认值是<code>0.0F</code></li>
+<li><strong>不能用于表示精确的值</strong></li>
 <li>包装类 Float</li>
 </ul>
 </li>
@@ -447,8 +447,8 @@
 <ul>
 <li>浮点数默认类型</li>
 <li>双精度、64位的浮点数</li>
-<li>默认值是<code>0.0d</code></li>
-<li>不能用于表示精确的值</li>
+<li>默认值是<code>0.0D</code></li>
+<li><strong>不能用于表示精确的值</strong></li>
 <li>包装类 Double</li>
 </ul>
 </li>
@@ -514,6 +514,7 @@
 <li>自动类型转换
 <ul>
 <li>转换钱的数据类型位数要低于转换后的数据类型</li>
+<li><code>byte,short,char-&gt; int -&gt; long -&gt; float -&gt; double</code></li>
 </ul>
 </li>
 <li>强制类型转换
@@ -573,113 +574,6 @@
 </ul>
 </li>
 </ul>
-<h6>修饰符</h6>
-<ul>
-<li>访问修饰符
-<ul>
-<li>default(即缺省，未添加)
-<ul>
-<li>在同一包内可见</li>
-<li>类、接口、变量、方法</li>
-</ul>
-</li>
-<li>private
-<ul>
-<li>在同一类内可见</li>
-<li>变量、方法</li>
-</ul>
-</li>
-<li>public
-<ul>
-<li>所有类可见</li>
-<li>类、接口、变量、方法</li>
-</ul>
-</li>
-<li>protected
-<ul>
-<li>对同一包内的类和所有子类可见</li>
-<li>变量、方法</li>
-</ul>
-</li>
-<li>访问控制与继承
-<ul>
-<li>父类为<code>public</code>，子类也必须为<code>public</code></li>
-<li>父类中声明为<code>protected</code>， 子类为<code>protected</code>或<code>public</code></li>
-<li>父类不可为<code>private</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>非访问修饰符
-<ul>
-<li>static
-<ul>
-<li>静态变量
-<ul>
-<li>用于声明独立与对象的静态变量，无论实例化多少对象，静态变量只有一份拷贝</li>
-</ul>
-</li>
-<li>静态方法
-<ul>
-<li>用于声明独立与对象的静态方法，不能调用类的非静态变量</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>final
-<ul>
-<li>变量
-<ul>
-<li>一经赋值，对象引用无法改变</li>
-</ul>
-</li>
-<li>方法
-<ul>
-<li>可以被子类继承，但是不能被子类修改</li>
-</ul>
-</li>
-<li>类型
-<ul>
-<li>无法被继承</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>abstract
-<ul>
-<li>抽象类
-<ul>
-<li>无法实例化，仅用于对类进行扩充</li>
-<li>与<code>final</code>冲突</li>
-<li>一旦存在抽象方法，则必须声明为抽象类，可以不包含抽象方法</li>
-<li>可以包含非抽象方法</li>
-</ul>
-</li>
-<li>抽象方法
-<ul>
-<li>没有方法的实现</li>
-<li>不能被声明为<code>final</code>或<code>static</code></li>
-<li>子类必须实现所有抽象方法，除非子类也是抽象类</li>
-<li>以分号结尾</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>synchronized
-<ul>
-<li>用于实例变量</li>
-<li>序列化时会被跳过</li>
-</ul>
-</li>
-<li>volatile
-<ul>
-<li>多线程访问时，会强制重新读取</li>
-<li>可能为null</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <h6>运算符</h6>
 <ul>
 <li>算术运算符
@@ -732,6 +626,255 @@
 <ul>
 <li>判断是否是类或者接口的一个对象</li>
 <li><code>( Object reference variable ) instanceof (class/interface type)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6>字符串</h6>
+<ul>
+<li>
+<p>声明</p>
+<ul>
+<li>使用双引号括起来<code>&quot;</code></li>
+<li>字符串都是<code>String</code>类的一个实例</li>
+<li>使用加号<code>+</code>进行字符串拼接</li>
+<li>字符串不可变</li>
+</ul>
+</li>
+<li>
+<p>内置方法</p>
+<ul>
+<li>
+<p><code>.contains(str)</code></p>
+<blockquote>
+<p>判断是否包含某个子串</p>
+</blockquote>
+</li>
+<li>
+<p><code>.equals(str)</code></p>
+<blockquote>
+<p>检测字符串是否相等</p>
+</blockquote>
+</li>
+<li>
+<p><code>.equalsIgnoreCase(str)</code></p>
+<blockquote>
+<p>检测字符串是否相等，且不区分大小写</p>
+</blockquote>
+</li>
+<li>
+<p><code>.indexOf(str)</code> /<code>.lastIndexOf(str)</code></p>
+<blockquote>
+<p>查找字符串并返回匹配的第一个子串位置，这个位置从串头/串尾开始计算</p>
+</blockquote>
+</li>
+<li>
+<p><code>.join(delimiter, ...ele)</code></p>
+<blockquote>
+<p>将所有元素使用定界符进行拼接，返回一个字符串</p>
+</blockquote>
+</li>
+<li>
+<p><code>.split(delimiter)</code></p>
+<blockquote>
+<p>将字符串根据给定的定界符进行分割，返回一个数组</p>
+</blockquote>
+</li>
+<li>
+<p><code>.length()</code></p>
+<blockquote>
+<p>获取字符串长度</p>
+</blockquote>
+</li>
+<li>
+<p><code>.replace(oldStr, newStr)</code></p>
+<blockquote>
+<p>将字符串中的某段子串使用新的子串替换</p>
+</blockquote>
+</li>
+<li>
+<p><code>.substring(start, end)</code></p>
+<blockquote>
+<p>截取字符串，获取一个子串</p>
+</blockquote>
+</li>
+<li>
+<p><code>.startWith(str)</code> / <code>.endWith(str)</code></p>
+<blockquote>
+<p>判断字符串是否以给定字符为开头或结尾</p>
+</blockquote>
+</li>
+<li>
+<p><code>.toLowerCase()</code> /<code>.toUpperCase()</code></p>
+<blockquote>
+<p>将字符串转为小写/大写</p>
+</blockquote>
+</li>
+<li>
+<p><code>.trim()</code></p>
+<blockquote>
+<p>删除首尾空格</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>构建字符串</p>
+<ul>
+<li><code>StringBuilder</code>
+<ul>
+<li>线程不安全，但是效率高</li>
+<li>在非循环的情况下，使用<code>+</code>进行字符串拼接会隐性地调用此方法</li>
+</ul>
+</li>
+<li><code>StringBuffer</code>
+<ul>
+<li>线程安全，但是效率较低</li>
+<li>正常情况下<strong>不会考虑使用</strong>此对象进行字符串构建，即便有此需求，也会考虑使用锁</li>
+</ul>
+</li>
+<li>内置方法
+<ul>
+<li><code>.append(str)</code> 追加一个字符串</li>
+<li><code>.insert(offset, str)</code> 在指定位置插入一个字符串</li>
+<li><code>.length()</code> 获取当前构建字符串的长度</li>
+<li><code>.delete(start, end)</code> 删除置顶区间的字符</li>
+<li><code>.setCharAt(offset, char)</code> 修改指定位置的字符</li>
+<li><code>.toString()</code> 构建完毕，返回一个字符串对象</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>在调用内置方法之前，应当首先判断不为<code>null</code>，否则将会<strong>抛出异常</strong></li>
+</ul>
+</li>
+</ul>
+<h6>大数值</h6>
+<ul>
+<li><code>BigInterger</code>
+<ul>
+<li><code>BigInterger.valueOf(int)</code> 获取对象</li>
+<li><code>.add(bigInt)</code> 加法</li>
+<li><code>.subtract(bigInt)</code> 减法</li>
+<li><code>.multiply(bigInt)</code> 乘法</li>
+<li><code>.divide(bigInt)</code> 除法</li>
+<li><code>.mode(bigInt)</code> 取余</li>
+<li><code>.intValue()</code>  将数值转为整型</li>
+<li><code>.longValue()</code> 将数值转为长整型</li>
+<li><code>.toString()</code> 将数值转为字符串</li>
+</ul>
+</li>
+<li><code>BigDecimal</code>
+<ul>
+<li><code>BigDecimal.valueOf(double)</code></li>
+<li><code>.add(bigDecimal)</code> 加法</li>
+<li><code>.subtract(bigDecimal)</code> 减法</li>
+<li><code>.multiply(bigDecimal)</code> 乘法</li>
+<li><code>.divide(bigDecimal)</code> 除法</li>
+<li><code>doubleValue</code> 将数值转为双精度数</li>
+<li><code>.toString()</code> 将数值转为字符串</li>
+</ul>
+</li>
+</ul>
+<h6>数组</h6>
+<ul>
+<li>
+<p>声明</p>
+<ul>
+<li>声明方式
+<ul>
+<li><code>int array[];</code></li>
+<li><code>int[] array</code></li>
+</ul>
+</li>
+<li>初始化
+<ul>
+<li>静态初始化
+<ul>
+<li><code>int intArray[] = {1,2,3,4};</code></li>
+</ul>
+</li>
+<li>动态初始化
+<ul>
+<li><code>float floatArray[] = new float[3];</code></li>
+</ul>
+</li>
+<li>创建匿名数组
+<ul>
+<li><code>new int[] {12,33,44}</code></li>
+</ul>
+</li>
+<li>一旦创建了数组，就不能再改变它的大小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>使用</p>
+<ul>
+<li>
+<p>引用</p>
+<ul>
+<li>通过下标来引用数组</li>
+<li><code>array[0]</code></li>
+</ul>
+</li>
+<li>
+<p>遍历</p>
+<ul>
+<li>
+<p>for语句</p>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    System.out.println(array[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</li>
+<li>
+<p>for each</p>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> item : array) &#123;</span><br><span class="line">    System.out.println(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>内置方法</p>
+<ul>
+<li><code>Arrays.copyOf(array, array.length())</code> 拷贝数组，直接通过等号赋值，实际是将引用复制了过去</li>
+<li><code>Array.copyOfRange(array, start, end)</code> 区间拷贝</li>
+<li><code>Arrays.sort(array)</code>  数组快速排序</li>
+<li><code>Arrays.toString(array)</code> 数组转为字符串</li>
+<li><code>Array.binarySearch(array, value)</code> 查找值为value的下标，查不到则返回-1</li>
+<li><code>Array.binarySearch(array, start, end)</code> 在指定区间内查找</li>
+<li><code>Arrays.fill(array, value)</code> 使用<code>value</code>向数组填充值</li>
+<li><code>Array.equals(array1, array2)</code> 数组大小相同，且各个下标对应的元素也都相等，则返回true</li>
+</ul>
+</li>
+<li>
+<p>多维数组</p>
+<ul>
+<li>
+<p>声明</p>
+<ul>
+<li><code>int[][] array</code></li>
+</ul>
+</li>
+<li>
+<p>初始化</p>
+<ul>
+<li>
+<p><code>new int[3][3]</code></p>
+</li>
+<li>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] array = &#123;</span><br><span class="line">    &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;,</span><br><span class="line">    &#123;<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+</li>
+</ul>
+</li>
+<li>
+<p>使用</p>
+<ul>
+<li><code>array[1][1]</code></li>
 </ul>
 </li>
 </ul>
@@ -1245,7 +1388,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">常用对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">文件I/O</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">12.</span> <span class="nav-text">枚举</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">大数值</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">常用对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">12.</span> <span class="nav-text">文件I/O</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">13.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">14.</span> <span class="nav-text">枚举</span></a></li></ol></div>
             
 
           </div>
