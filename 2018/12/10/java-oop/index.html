@@ -99,18 +99,18 @@
 
 
 
-  <meta name="description" content="#####声明   基础结构 123456789101112public class Dog&amp;#123;    String name;    int age;       void bark()&amp;#123;  // 汪汪叫        System.out.println(&quot;汪汪，不要过来&quot;);    &amp;#125;     void hungry()&amp;#123;  // 饥饿        S">
+  <meta name="description" content="声明   基础结构 123456789101112public class Dog&amp;#123;    String name;    int age;       void bark()&amp;#123;  // 汪汪叫        System.out.println(&quot;汪汪，不要过来&quot;);    &amp;#125;     void hungry()&amp;#123;  // 饥饿        System">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面向对象">
 <meta property="og:url" content="https://cirvor.github.io/2018/12/10/java-oop/index.html">
 <meta property="og:site_name" content="Cirvor">
-<meta property="og:description" content="#####声明   基础结构 123456789101112public class Dog&amp;#123;    String name;    int age;       void bark()&amp;#123;  // 汪汪叫        System.out.println(&quot;汪汪，不要过来&quot;);    &amp;#125;     void hungry()&amp;#123;  // 饥饿        S">
+<meta property="og:description" content="声明   基础结构 123456789101112public class Dog&amp;#123;    String name;    int age;       void bark()&amp;#123;  // 汪汪叫        System.out.println(&quot;汪汪，不要过来&quot;);    &amp;#125;     void hungry()&amp;#123;  // 饥饿        System">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-19T08:42:47.651Z">
+<meta property="og:updated_time" content="2019-03-20T07:33:25.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面向对象">
-<meta name="twitter:description" content="#####声明   基础结构 123456789101112public class Dog&amp;#123;    String name;    int age;       void bark()&amp;#123;  // 汪汪叫        System.out.println(&quot;汪汪，不要过来&quot;);    &amp;#125;     void hungry()&amp;#123;  // 饥饿        S">
+<meta name="twitter:description" content="声明   基础结构 123456789101112public class Dog&amp;#123;    String name;    int age;       void bark()&amp;#123;  // 汪汪叫        System.out.println(&quot;汪汪，不要过来&quot;);    &amp;#125;     void hungry()&amp;#123;  // 饥饿        System">
 
 
 
@@ -386,7 +386,7 @@
       
 
       
-        <p>#####声明</p>
+        <h5>声明</h5>
 <ul>
 <li>
 <p>基础结构</p>
@@ -624,14 +624,148 @@
 </ul>
 </li>
 </ul>
-<h5>重写</h5>
+<h5>内部特殊关键字</h5>
+<ul>
+<li><code>this</code>
+<ul>
+<li>调用类中的属性，即声明的变量</li>
+<li>作为方法名来调用构造函数</li>
+<li>作为参数传递</li>
+</ul>
+</li>
+<li><code>super</code>
+<ul>
+<li>调用父类中声明为 private 的变量</li>
+<li>调用父类已经重写了的方法</li>
+<li>作为方法名来调用父类构造方法</li>
+</ul>
+</li>
+</ul>
 <h5>重载</h5>
+<ul>
+<li>同一个类中的多个方法可以有相同的名字，只要它们的参数列表不同就可以</li>
+<li>参数列表又叫参数签名，包括参数的<strong>类型</strong>、参数的<strong>个数</strong>和参数的<strong>顺序</strong>，只要有一个不同就叫做参数列表不同</li>
+<li>仅仅参数变量名称不同是<strong>不可以</strong>的</li>
+<li>构造方法也可以重载</li>
+<li>声明为<code>static</code>的方法不能被重载，但是能够被再次声明</li>
+<li>方法的返回类型可以相同也可以不相同</li>
+<li>仅仅返回类型不同不足以成为方法的重载</li>
+</ul>
 <h5>继承</h5>
+<ul>
+<li>继承使用 <code>extends</code> 关键字</li>
+<li>子类可以重写父类的方法</li>
+<li>子类可以继承父类除<code>private</code>以外的所有的成员</li>
+<li><strong>造方法不能被继承</strong></li>
+<li>一个类仅能继承一个其它类，即一个类只能有一个父类</li>
+<li>如果没有显示的指明父类，那么就默认继承了 <code>Object</code> 类</li>
+</ul>
+<h5>重写</h5>
+<ul>
+<li>重写是子类对父类的允许访问的方法的实现过程进行重新编写, <strong>返回值和形参都不能改变</strong></li>
+<li>访问权限<strong>不能</strong>比父类中被重写的方法的<strong>访问权限更低</strong></li>
+<li>子类可以根据需要，定义特定于自己的行为</li>
+<li>不能抛出<strong>新的检查异常</strong>或者比被重写方法申明<strong>更加宽泛</strong>的异常</li>
+<li><code>final</code>的方法<strong>不能被重写</strong></li>
+<li>声明为<code>static</code>的方法不能被重写，但是能够被再次声明</li>
+<li>子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为<code>private</code>和<code>final</code>的方法</li>
+<li>子类和父类不在同一个包中，那么子类只能够重写父类的声明为<code>public</code>和<code>protected</code>的非<code>final</code>方法</li>
+<li><strong>构造方法不能被重写</strong></li>
+<li>如果不能继承一个方法，则不能重写这个方法</li>
+<li>需要在子类中调用父类的被重写方法时，要使用<code>super</code>关键字</li>
+</ul>
 <h5>多态</h5>
+<ul>
+<li>向上转型
+<ul>
+<li>通过定义一个父类类型的变量来引用子类的实例</li>
+<li>使用向上转型的方式调用方法时：
+<ul>
+<li>首先检查父类中是否有该方法，如果没有，则<strong>编译错误</strong>；如果有，则检查子类是否覆盖了该方法</li>
+<li>如果子类覆盖了该方法，就调用子类的方法，否则调用父类方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向下转型
+<ul>
+<li>通过定义一个子类类型的变量来引用父类的实例</li>
+<li>使用向下转型的方式调用方法时：
+<ul>
+<li>如果父类引用的对象如果引用的是指向的子类对象，那么编译是不会出错误的</li>
+<li>如果父类引用的对象是父类本身，那么在向下转型的过程中是不安全的，编译不会出错，但是运行时会出现java.lang.ClassCastException错误</li>
+<li><strong>务必要使用instanceof</strong>来避免出错此类错误</li>
+<li><strong>子类对象必须向上转型后，才能再向下转型</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>instanceof</code>
+<ul>
+<li>用于判断一个变量所实际引用的对象的类型</li>
+<li><code>obj instanceof Object</code></li>
+</ul>
+</li>
+</ul>
 <h5>抽象类</h5>
+<ul>
+<li>使用 <code>abstract</code> 修饰符来表示抽象方法和抽象类</li>
+<li>只给出方法定义而不具体实现的方法被称为抽象方法</li>
+<li>包含一个或多个抽象方法的类也<strong>必须被声明为抽象类</strong></li>
+<li>抽象类不能被实例化，抽象方法必须在子类中被实现</li>
+<li><strong>不能有抽象构造方法或抽象静态方法</strong></li>
+</ul>
 <h5>接口</h5>
+<ul>
+<li>接口使用<code>interface</code> 关键字来声明，可以看做是<strong>一种特殊的抽象类</strong>，可以指定一个类必须做什么，而不是规定它如何去做</li>
+<li>接口中<strong>只能定义抽象方法</strong>，这些方法默认为 <code>public abstract</code> 的，因而在声明方法时可以省略这些修饰符</li>
+<li>接口中没有构造方法，不能被实例化</li>
+<li>一个接口不实现另一个接口，但可以<strong>继承多个</strong>其他接口，接口的多继承特点弥补了类的单继承</li>
+<li>接口必须通过类来实现(<code>implements</code>)它的抽象方法，然后再实例化类。类实现接口的关键字为<code>implements</code></li>
+</ul>
 <h5>内部类</h5>
-<h5>包机制</h5>
+<ul>
+<li>
+<p>声明</p>
+<ul>
+<li>在一个类（或方法、语句块）的内部定义另一个类，即内部类，也叫嵌套类</li>
+<li>内部类可以访问外部类中的数据，包括私有的数据</li>
+<li>内部类可以对同一个包中的其他类隐藏起来</li>
+<li>当想要定义一个回调函数且不想编写大量代码时，使用<strong>匿名(anonymous)内部类</strong>比较便捷</li>
+<li>内部类可以减少类的命名冲突</li>
+<li>内部类可以是静态(<code>static</code>)的，可以使用 <code>public</code>、<code>protected</code> 和 <code>private</code> 访问控制符，而外部类只能使用 <code>public</code>，或者默认</li>
+</ul>
+</li>
+<li>
+<p>成员式内部类</p>
+<ul>
+<li>指在外部类内部直接定义（不在方法内部或代码块内部）的类</li>
+<li>可以直接使用外部类的所有变量和方法，即使是 <code>private</code> 的</li>
+<li>外部类要想访问内部类的成员变量和方法，则需要通过内部类的对象来获取</li>
+<li>成员式内部类可以使用各种修饰符，包括 <code>public</code>、<code>protected</code>、<code>private</code>、<code>static</code>、<code>final</code>和 <code>abstract</code>，也可以不写</li>
+<li>若有 <code>static</code> 修饰符，就为类级，否则为对象级。类级可以通过外部类直接访问，对象级需要先生成外部的对象后才能访问</li>
+<li><strong>非静态内部类中不能声明任何 <code>static</code> 成员</strong></li>
+</ul>
+</li>
+<li>
+<p>局域内部类</p>
+<ul>
+<li>局部内部类(Local class)是定义在代码块中的类</li>
+<li>它们只在定义它们的代码块中是可见的</li>
+<li>可以使用定义它们的代码块中的任何局部 final 变量</li>
+<li>局部类<strong>不可以是<code>static</code></strong> 的，里边也<strong>不能定义 <code>static</code> 成员</strong></li>
+<li>局部类不可以用 public、private、protected 修饰，<strong>只能使用缺省的</strong></li>
+<li>局部类可以是 abstract 的</li>
+</ul>
+</li>
+<li>
+<p>匿名内部类</p>
+<ul>
+<li>局部内部类的一种特殊形式，即没有变量名指向这个类的实例，而且具体的类实现会写在这个内部类里面</li>
+</ul>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">       </span><br><span class="line">        <span class="comment">// 继承 Person 类</span></span><br><span class="line">        <span class="keyword">new</span> Person() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"eat something"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</li>
+</ul>
 
       
     </div>
@@ -866,7 +1000,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">对象初始化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">重写</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">重载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">包机制</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">对象初始化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">内部特殊关键字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">重载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">重写</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">12.</span> <span class="nav-text">内部类</span></a></li></ol></div>
             
 
           </div>
